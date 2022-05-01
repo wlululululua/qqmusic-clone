@@ -1,0 +1,96 @@
+.search {
+    position: relative;
+    font-size: 14px;
+}
+
+.searchInput {
+    width: 100%;
+    height: 3em;
+    padding: 0.5em;
+    outline: none;
+}
+
+.searchButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    padding-right: 0.5em;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.searchButton svg {
+    font-size: 2em;
+}
+
+.searchButton svg:hover {
+    color: var(--green-color);
+}
+
+.searchList {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.hot dt {
+    display: none;
+}
+
+.searchList dd {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.searchList dd:hover {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.searchList dd:hover .number,
+.searchList dd:hover .listen {
+    color: inherit;
+}
+
+.number {
+    margin-right: 1em;
+    color: #ff4222;
+}
+
+.listen, .clearBtn {
+    margin-left: auto;
+    color: #999;
+}
+
+.history dt {
+    display: flex;
+    padding: 0.5em 1em;
+    color: #999;
+}
+
+.clearBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.clearBtn:hover {
+    color: var(--green);
+}
+
+.clearBtn svg {
+    font-size: 1.5rem;
+}
+
+.delete {
+    margin-left: auto;
+    font-size: 1.3rem;
+}

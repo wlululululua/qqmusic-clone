@@ -1,0 +1,37 @@
+.toolBox {
+    position: fixed;
+    right: 2rem;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolBox span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #c9c9c9;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.toolBox span:hover {
+    color: var(--green);
+    background-color: #ededed;
+}
+
+.toolBox span svg {
+    font-size: 2rem;
+}
+
+.toTop {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.toTop_hidden {
+    opacity: 0;
+}

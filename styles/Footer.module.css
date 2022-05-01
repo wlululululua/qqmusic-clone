@@ -1,0 +1,147 @@
+.footer {
+    background-color: #333;
+    color: #999;
+}
+
+.footerInfo {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footerInfo dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footerInfo dt {
+    width: 100%;
+    padding: 2em 0;
+}
+
+.footerInfo dd {
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.footerInfo dd:hover {
+    color: var(--green);
+}
+
+.footerInfo dl span {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.icon:hover + span {
+    color: var(--green);
+}
+
+
+.iconPC {
+    background-image: url(../public/icons/pc-1.png);
+}
+
+.iconPC:hover {
+    background-image: url(../public/icons/pc-2.png);
+}
+
+.iconMAC {
+    background-image: url(../public/icons/mac-1.png);
+}
+
+.iconMAC:hover {
+    background-image: url(../public/icons/mac-2.png)
+}
+
+.iconAndroid {
+    background-image: url(../public/icons/android-1.png);
+}
+
+.iconAndroid:hover {
+    background-image: url(../public/icons/android-2.png);
+}
+
+.iconIPhone {
+    background-image: url(../public/icons/iphone-1.png);
+}
+
+.iconIPhone:hover {
+    background-image: url(../public/icons/iphone-2.png);
+}
+
+.icon_qmkg {
+    background-image: url(../public/icons/qmkg-1.png);
+}
+
+.icon_qmkg:hover {
+    background-image: url(../public/icons/qmkg-2.png);
+}
+
+.icon_yhyx {
+    background-image: url(../public/icons/yhyx-1.png);
+}
+
+.icon_yhyx:hover {
+    background-image: url(../public/icons/yhyx-2.png);
+}
+
+.icon_qplay {
+    background-image: url(../public/icons/qplay-1.png);
+}
+
+.icon_qplay:hover {
+    background-image: url(../public/icons/qplay-2.png);
+}
+
+.icon_fan {
+    background-image: url(../public/icons/fan-1.png);
+}
+
+.icon_fan:hover {
+    background-image: url(../public/icons/fan-2.png);
+}
+
+.siteInfo {
+    padding: 3em 0 1em;
+    text-align: center;
+}
+
+.siteInfo a:hover {
+    color: var(--green);
+}
+
+.siteInfo svg {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+    .footerInfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10rem;
+        grid-row-gap: 2rem;
+    }
+    .footerInfo .cooperate {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 0.5rem;
+        justify-items: flex-start;
+    }
+
+    .cooperate dt {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
