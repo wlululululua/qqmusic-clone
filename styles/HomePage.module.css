@@ -1,7 +1,24 @@
 .main {
-    background-color: #f3f3f3;
+    background-color: #ddd;
 }
 
 .main section:nth-child(2n) {
     background-color: #fdfdfd;
+}
+
+.title {
+    padding: 2em 0 1em;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* section toplist */
+@media (min-width: 1200px) {
+    .gridTopListCard {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
 }

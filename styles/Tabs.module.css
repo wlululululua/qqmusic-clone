@@ -1,0 +1,25 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.tabs span {
+    padding: 1em;
+    margin: 0 1rem;
+}
+
+.tabs span:hover {
+    color: var(--green);
+}
+
+.active {
+    color: var(--green);
+}
+
+@media (min-width: 600px) {
+    .tabs {
+        flex-direction: row;
+    }
+}

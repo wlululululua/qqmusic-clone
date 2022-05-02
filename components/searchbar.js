@@ -5,6 +5,37 @@ import { HotListContext } from "../pages";
 
 const SearchBar = () => {
     const [isShow, setIsShow] = useState(false);
+    const [isSearch, setIsSearch] = useState(false);
+    const [searchKey, setSearchKey] = useState("");
+
+    const handleFocus = (e) => {
+        if (e.target.value.length === 0) {
+            setIsShow(true);
+        }
+        console.log("onfocus");
+    };
+
+    const handleBlur = () => {
+        setIsShow(false);
+        console.log("onblur");
+    };
+
+    const handleChange = (e) => {
+        console.log("onchange");
+        if (e.target.value.length === 0) {
+            setIsShow(true);
+        } else {
+            setIsShow(false);
+            setIsSearch(true);
+            setSearchKey(e.target.value);
+        }
+    };
+
+    useEffect(() => {
+        if (isSearch) {
+            console.log("搜索：", searchKey);
+        }
+    });
 
     return (
         <div className={styles.search}>
@@ -12,21 +43,22 @@ const SearchBar = () => {
                 type="text"
                 placeholder="搜索音乐、MV、歌单、用户"
                 className={styles.searchInput}
-                onFocus={() => setIsShow(true)}
-                onBlur={() => setIsShow(false)}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                onChange={handleChange}
             />
             <button className={styles.searchButton}>
                 <AiOutlineSearch />
             </button>
-            {/* {isShow && <SearchList />} */}
-            <SearchList />
+            {isShow && <HistorySearch />}
+            {isSearch && <SearchResult />}
         </div>
     );
 };
 
 export default SearchBar;
 
-const SearchList = () => {
+const HistorySearch = () => {
     const hotList = useContext(HotListContext);
     const [searchHistory, setSearchHistory] = useState([
         "LOSER",
@@ -81,6 +113,19 @@ const SearchList = () => {
                     );
                 })}
             </dl>
+        </div>
+    );
+};
+
+const SearchResult = () => {
+    return (
+        <div>
+            <dl className="song">
+                <dt></dt>
+            </dl>
+            <dl className="singer"></dl>
+            <dl className="album"></dl>
+            <dl className="mv"></dl>
         </div>
     );
 };
