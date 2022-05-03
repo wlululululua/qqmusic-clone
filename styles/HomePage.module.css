@@ -1,9 +1,5 @@
-.main {
-    background-color: #ddd;
-}
-
-.main section:nth-child(2n) {
-    background-color: #fdfdfd;
+.main section {
+    background: linear-gradient(#f2f2f2, #fafafa);;
 }
 
 .title {
@@ -13,12 +9,17 @@
     font-size: 1.5rem;
 }
 
-/* section toplist */
-@media (min-width: 1200px) {
-    .gridTopListCard {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
+.row {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0 5rem;
+    display: flex;
+    justify-content: space-between;
 }
+
+.recommend {
+    display: block;
+    width: 36rem;
+    height: 14.4rem;
+}
+

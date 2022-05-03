@@ -3,6 +3,10 @@ import styles from "../styles/HomePage.module.css";
 import React from "react";
 import Tabs from "../components/tabs";
 import TopListCard from "../components/toplistcard";
+import MvCard from "../components/mvcard";
+import GridContentLayout from "../components/gridcontent";
+import SongCard from "../components/songcard";
+import Card from "../components/card";
 
 export const HotListContext = React.createContext();
 
@@ -23,11 +27,18 @@ const HomePage = ({ hotList }) => {
                                 "网络歌曲",
                             ]}
                         />
-                        <div className="slider">
-                            <div className="slide-box"></div>
-                            <span className="prev"></span>
-                            <span className="next"></span>
-                        </div>
+                        <GridContentLayout col="5">
+                            {new Array(5).fill().map((val, i) => {
+                                return (
+                                    <Card
+                                        key={i}
+                                        coverImgUrl="./images/card-cover.jpg"
+                                        title="满级人类进化之路必备BGM"
+                                        info="播放量：2924.4万"
+                                    />
+                                );
+                            })}
+                        </GridContentLayout>
                     </section>
                     <section>
                         <h2 className={styles.title}>新歌首发</h2>
@@ -41,9 +52,25 @@ const HomePage = ({ hotList }) => {
                                 "日本",
                             ]}
                         />
+                        <GridContentLayout col="3">
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                        </GridContentLayout>
                     </section>
                     <section>
                         <h2 className={styles.title}>精彩推荐</h2>
+                        <div class={styles.row}>
+                            <a href="" className={styles.recommend}>
+                                <img src="./images/recommend-1.jpg" alt="" />
+                            </a>
+                            <a href="" className={styles.recommend}>
+                                <img src="./images/recommend-2.jpg" alt="" />
+                            </a>
+                        </div>
                     </section>
                     <section>
                         <h2 className={styles.title}>新碟首发</h2>
@@ -57,16 +84,28 @@ const HomePage = ({ hotList }) => {
                                 "其它",
                             ]}
                         />
+                        <GridContentLayout col="5">
+                            {new Array(10).fill().map((val, i) => {
+                                return (
+                                    <Card
+                                        key={i}
+                                        coverImgUrl="./images/album-cover.jpg"
+                                        title="Alcohol"
+                                        singer="反返"
+                                    />
+                                );
+                            })}
+                        </GridContentLayout>
                     </section>
                     <section>
                         <h2 className={styles.title}>排行榜</h2>
-                        <div className={styles.gridTopListCard}>
+                        <GridContentLayout col="5">
                             <TopListCard />
                             <TopListCard />
                             <TopListCard />
                             <TopListCard />
                             <TopListCard />
-                        </div>
+                        </GridContentLayout>
                     </section>
                     <section>
                         <h2 className={styles.title}>MV</h2>
@@ -80,6 +119,18 @@ const HomePage = ({ hotList }) => {
                                 "日本",
                             ]}
                         />
+                        <GridContentLayout col="5">
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                            <MvCard />
+                        </GridContentLayout>
                     </section>
                 </main>
             </Layout>

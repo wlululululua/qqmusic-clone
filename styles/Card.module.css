@@ -1,0 +1,69 @@
+.card {
+    width: 14rem;
+    margin-bottom: 2rem;
+}
+
+.card a {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cover {
+    position: relative;
+    height: 14rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: all 0.5s ease-in;
+}
+
+.cover:hover img {
+    transform: scale(1.07);
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.cover:hover .mask {
+    opacity: 0.2;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    color: var(--play-icon);
+    transform: translate(-0.5em, -0.5em) scale(1);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.cover:hover .icon {
+    opacity: 1;
+    transform: translate(-0.5em, -0.5em) scale(1.5);
+}
+
+.title:hover, .singer:hover {
+    color: var(--green);
+}
+
+.info, .singer {
+    color: #999;
+}
+
