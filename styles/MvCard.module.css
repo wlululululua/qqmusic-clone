@@ -3,6 +3,10 @@
     margin-bottom: 1rem;
 }
 
+.card+.card {
+    margin-left: 1.5rem;
+}
+
 .card a {
     display: block;
     white-space: nowrap;

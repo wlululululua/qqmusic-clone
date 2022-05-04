@@ -10,16 +10,21 @@
 }
 
 .row {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0 5rem;
     display: flex;
-    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
 }
 
 .recommend {
     display: block;
     width: 36rem;
     height: 14.4rem;
+}
+
+.recommend + .recommend {
+    margin-left: 1.5rem;
 }
 

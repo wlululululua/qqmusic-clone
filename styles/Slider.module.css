@@ -1,0 +1,72 @@
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.inner {
+    margin: 0 auto;
+    padding: 2rem 0 6rem;
+    overflow: hidden;
+}
+
+.items {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.circles {
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
+
+.circles span {
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.circles span:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+}
+
+.circles span.active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.prev, .next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 7rem;
+    background-color: #ededed;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.container:hover .next,
+.container:hover .prev {
+    transform: translate(0, -50%);
+}
+
+.prev {
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+}
+
+.next {
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+}
